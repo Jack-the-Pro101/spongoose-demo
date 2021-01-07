@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --fontMain: 'Roboto';
+    --fontCondensed: 'Roboto Condensed';
+    --fontThin: 'Open Sans';
+    font-size: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- Custom scrollbar code ----- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: 0px 0px 4px rgb(36, 36, 36) inset;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(70, 70, 70);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgb(143, 143, 143);
+}
+::-webkit-slider-thumb {
+    background: red;
+}
+
+@media only screen and (max-width: 600px) {
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+/* ----- Navbar code ----- */
+
+.navbar {
+    font-size: 7rem;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    font-family: var(--fontCondensed);
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.541);
+}
+
+.navbar--transparent {
+    background: transparent;
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-list__item {
+    padding: 0rem 8rem;
+    line-height: 48px;
+    transition-duration: 300ms;
+    border-top: transparent 2px solid;
+    border-bottom: transparent 2px solid;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.navbar-list__item:first-child {
+    position: absolute;
+    left: 0;
+}
+.navbar-list__item:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.548);
+    color: gold;
+    border-bottom: silver 2px solid;
+}
+.navbar-list__item--selected {
+    background: rgba(0, 0, 0, 0.548);
+    color: gold;
+    border-bottom: silver 2px solid;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-list__item {
+        font-size: 5rem;
+    }
+    .navbar-list__item {
+        padding: 0rem 6rem;
+    }
+}
+
+/* ----- Parallax code ----- */
+
+.parallax-wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 2px;
+    font-family: var(--fontMain);
+    font-size: 8rem;
+    background: #252525;
+    scroll-behavior: smooth;
+}
+
+.parallax-wrapper--themelight {
+    background: white;
+}
+
+.parallax-section { 
+    position: relative;
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 3px;
+}
+
+.parallax::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-0.5px) scale(1.26);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.init-bg {
+    text-align: center;
+}
+.init-bg::after {
+    background-image: url('Assets/Images/spongoose-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    transform: translateZ(0.5px) scale(0.7);
+}
+.yt-bg {
+    height: 45vh;
+    text-align: center;
+}
+.yt-bg:hover {
+    cursor: pointer;
+}
+.yt-bg::after {
+    height: 49vh;
+    background-image: url('https://logos-world.net/wp-content/uploads/2020/04/YouTube-Emblem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h2 {
+    transform: translateZ(-0.45px);
+}
+.dd-bg {
+    height: 45vh;
+}
+.dd-bg::after {
+    height: 50vh;
+    background-image: url('https://cdn.vox-cdn.com/thumbor/Rb_LWJvgtDBNvRMbPXTnMSyij9o=/0x200:2400x1400/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/11946613/discord_logo_wordmark_2400.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ----- Main website code ----- */
+
+main {
+    background: #212224;
+    color: white;
+    padding: 12px 0px;
+    font-family: var(--fontMain);
+    letter-spacing: 0px;
+    overflow: hidden;
+}
+.--themelight-main {
+    background: #f1f1f1;
+    color: black;
+}
+
+main .centered-content {
+    font-family: inherit;
+    font-size: 5rem;
+    width: 65vw;
+    margin: 0px auto;
+    height: 100%;
+    padding: 5rem;
+}
+
+.centered-content .section-header {
+    margin: 0px 0px 16px 0px;
+    text-align: center;
+    font-size: 7rem;
+}
