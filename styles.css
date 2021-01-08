@@ -156,6 +156,16 @@ html {
 h1 {
     transform: translateZ(0.5px) scale(0.7);
 }
+.parallax-spacer-bg {
+    height: 45vh;
+}
+.parallax-spacer-bg::after {
+    background-image: url('https://images.unsplash.com/photo-1549321495-305eb13f8aa9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
 .yt-bg {
     height: 45vh;
     text-align: center;
@@ -212,4 +222,10 @@ main .centered-content {
     margin: 0px 0px 16px 0px;
     text-align: center;
     font-size: 7rem;
+}
+
+@media only screen and (max-width: 600px) {
+    main .centered-content {
+        width: 95vw;
+    }
 }
