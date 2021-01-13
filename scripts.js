@@ -12,6 +12,7 @@ function isInViewport(el) {
 }
 
 const spongooseYT = 'https://www.youtube.com/spongoose'
+const spongooseDg = 'https://discord.com/invite/WTjJe9pj9T';
 
 const about = document.getElementById('about');
 const aboutBtn = document.getElementById('aboutBtn');
@@ -44,6 +45,7 @@ document.getElementById('themeBtn').addEventListener('click',function()
         document.getElementById('main1').className = '--themelight-main';
         document.getElementById('main2').className = '--themelight-main';
         document.getElementById('main3').className = '--themelight-main';
+        document.getElementById('main4').className = '--themelight-main';
         document.querySelector('.parallax-wrapper').classList.add('parallax-wrapper--themelight');
         document.getElementById('themeBtn').innerHTML = '<i class="fas fa-moon"></i>';
         currentTheme = 'light';
@@ -52,6 +54,7 @@ document.getElementById('themeBtn').addEventListener('click',function()
         document.getElementById('main1').className = '';
         document.getElementById('main2').className = '';
         document.getElementById('main3').className = '';
+        document.getElementById('main4').className = '';
         document.querySelector('.parallax-wrapper').classList.remove('parallax-wrapper--themelight');
         document.getElementById('themeBtn').innerHTML = '<i class="fas fa-sun"></i>';
         currentTheme = 'dark';
